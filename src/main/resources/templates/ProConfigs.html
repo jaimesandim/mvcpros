@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ProConfigs</title>
+</head>
+<body>
+    <h1>ProConfigs</h1>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Mouse</th>
+                <th>Teclado</th>
+                <th>Monitor</th>
+                <th>Fone</th>
+                <th>Mousepad</th>
+                <th>Sensibilidade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="ProSettings: ${ProConfigs}">
+                <td th:text="${ProSettings.nome}">Nome</td>
+                <td th:text="${ProSettings.mouse}">Mouse</td>
+                <td th:text="${ProSettings.teclado}">Teclado</td>
+                <td th:text="${ProSettings.monitor}">Monitor</td>
+                <td th:text="${ProSettings.fone}">Fone</td>
+                <td th:text="${ProSettings.mousepad}">Mousepad</td>
+                <td th:text="${ProSettings.sensibilidade}">Sensibilidade</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
